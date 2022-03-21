@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý dự án</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/Quanlyduan.js"></script>
+    <style>
+        #erpccv,
+        #ernn1,
+        #ermt,
+        #ernn,
+        #ertu,
+        #erden,
+        #ersongay {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wapper">
+        <div id="menu">
+            <ul>
+                <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="../html/Quanlyduan.html"><i class="fas fa-file"></i>Quản lý dự án</a></li>
+                <li><a href="../html/Info.html"><i class="fas fa-user"></i>Tài khoản của tôi</a></li>
+                <li><a href="../html/quanlynhanvien.html"><i class="fas fa-male"></i>Quản lý nhân viên</a></li>
+                <li><a href="../html/Xemcongviec.html"><i class="fa fa-search"></i>Xem công việc</a></li>
+                <li><a href="../html/About.html"><i class="far fa-question-circle"></i>About</a></li>
+                <li><a href="../html/contact.html"><i class="far fa-envelope"></i>Contact</a></li>
+            </ul>
+            <a href="/index.html"> <button style="float: right;margin: 13px;">Đăng xuất<i class="fa fa-sign-out"></i></button></a>
+
+        </div>
+        <div class="giua">
+            <section>
+                <div class="trai">
+                    <article style="background-color: white;border-radius: 5px; text-align: center;background-color: yellow;">
+                        <d style="font-size: 20px;" id="test">Danh sách công việc đã giao</d>
+                    </article><br><br>
+                    <article id="morong" style="background-color: yellow;height: 480px;">
+                        <table id="myTable" style="width: 100%;background-color: white;border-radius: 0px;">
+                            <tr>
+                                <td id="nn" style="text-align: center;">Người nhận (mã)</td>
+                                <td id="cv" style="text-align: center;">Tên công việc</td>
+                                <td style="text-align: center;">Xóa</td>
+                            </tr>
+                        </table>
+                    </article>
+                </div>
+            </section>
+            <aside>
+                <div class="phai" style="background: url(../img/NEN.jpg);">
+                    <form>
+                        <h1 style="text-align: center;color: black; background-color: cornsilk;">Phân Công Công Việc</h1>
+                        <textarea id="pccv" style="height: 100px;width: 100%;border-radius: 5px;box-shadow: 2px 2px 2px;" placeholder="Phân công công việc"></textarea>
+                        <div id="erpccv" style="text-align: center;">(*)</div>
+                        <article style="border-radius: 10px;background-color:white;">
+                            <input type="text" name="ten1" id="nguoinhan1" placeholder="Tên công việc" style="border-radius: 5px;box-shadow: 2px 2px 2px;width: 100%;">
+                            <div id="ernn1">(*)</div>
+                            <textarea style="height: 100px;width: 100%;border-radius: 10px;box-shadow: 2px 2px 2px;" placeholder="Mô tả:" id="mtcv"></textarea>
+                            <div id="ermt">(*)</div>
+                            <input type="number" name="ten" id="nguoinhan" placeholder="Người nhận (Mã NV):" size="117px">
+                            <d id="ernn">(*)</d><br><br> Từ:
+                            <input type="date" id="tu">
+                            <d id="ertu">(*)</d><br><br> Đến:
+                            <input type="date" id="den">
+                            <d id="erden" style="text-align: center;">(*)</d><br><br> Số ngày dự tính công việc:
+                            <d id="ersongay" style="text-align: center;"></d>
+                        </article>
+                        <br>
+                        <label id=gv style="text-align: center;border-radius: 10px;box-shadow: 1px 1px 1px;float: left;display: block;width: 100px; box-sizing: border-box;" onclick="themvaobang()" onmousedown="xuong()" onmouseup="len()" value="Giao việc">Giao việc </label>
+                        <input class="huy" type="reset" style="border-radius: 10px;box-shadow: 1px ;float: left;display: block;width: 100px; margin-left: 20px;" value="Hủy">
+                        <label id="capnhat2" style="display: none;text-align: center;border-radius: 10px;box-shadow: 1px 1px 1px;float: left;display: block;width: 100px; box-sizing: border-box;margin-left: 20px;" onclick="capnhat();" onmousedown="xuong1()" onmouseup="len1()">Cập nhật</label>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+</body>
+
+</html>

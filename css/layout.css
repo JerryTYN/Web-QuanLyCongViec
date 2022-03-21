@@ -1,0 +1,117 @@
+*{
+    padding: 0px ;margin: 0px auto;
+    border-radius: 10px;
+}
+body{
+    background: url(../img/NEN.jpg);
+}
+.wapper{
+    margin: 11px;
+    padding: auto;
+}
+section{
+    background-color: white;
+    width: 59%;
+    float: right;
+    height: 700px;
+    padding: 10px;
+    box-shadow: 10px;
+}
+aside{
+    background-color: white;
+    width: 40%;
+    float: left;
+    height: 700px;
+    padding: 10px;
+}
+section article{
+    border: 2px solid black;
+    padding: 20px;
+}
+aside article{
+    border: 2px solid black;
+    padding: 20px;
+}
+.trai{
+    height: 675px;
+    border: 3px solid black;
+    padding: 10px;
+}
+.phai{
+    height: 675px;
+    border: 3px solid black;
+    padding: 10px;
+}
+table, td {
+    border: 1px solid black;
+}
+#nn{
+    width: 15%;
+    border-radius: 0px;
+}
+#cv,#mota,#ngaynhan,#ngayhethan,#manv{
+    width: 15%;
+}
+#nutxoa{
+    width: 5%;
+}
+.huy:hover{
+      background-color: silver;
+}
+#gv{
+      background-color: white;
+}
+#gv:hover{
+    background-color: silver;
+}
+#capnhat2:hover{
+    background-color: silver;
+}
+td{
+      border-radius: 2px;
+}
+.nutxoa:hover{
+      background-color: red;
+}
+.bentrai:hover{
+      background-color: silver;
+}
+/* .benphai:hover{
+      background-color: red;
+} */
+#menu{
+    border-radius: 6px;
+    width: 100%;
+    height: 50px;
+    
+    background: rgb(216, 216, 216);;
+}
+#menu ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+#menu ul li{
+    
+    float: left;
+    text-align: center;
+    padding: 0px 15px 0px 15px;
+}
+#menu ul li a{
+    text-decoration: none;
+    line-height: 50px;
+    color: rgb(1, 56, 175);
+    font-weight: bold;
+    font-size: 20px;
+}
+#menu:hover li:hover
+{
+ background-color: white;
+ border-radius: 5px;
+}
+.giua{
+    padding: 15px;
+}
+#capnhat2{
+    background-color: white;
+}

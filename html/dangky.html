@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí</title>
+
+    <link rel="stylesheet" href="../css/dangky.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- 
+    <style>
+        [class="col-3"] {
+            text-align: right;
+        }
+    </style> -->
+    <script>
+        $(document).ready(function() {
+            $("#txtten").blur(function() {
+                kiemtratendangnhap();
+
+
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtmk").blur(function() {
+                kiemtramatkhau();
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtnlmk").blur(function() {
+                kiemtralaimatkhau();
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtht").blur(function() {
+                kiemtrahoten();
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtns").blur(function() {
+                kiemtranamsinh();
+
+            })
+
+        })
+
+        $(document).ready(function() {
+            $("#txtdc").blur(function() {
+                kiemtradiachi();
+            })
+        })
+        $(document).ready(function() {
+            $("#txtsdt").blur(function() {
+                kiemtrasodienthoai();
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtemail").blur(function() {
+                kiemtraemail();
+            })
+
+        });
+
+        function kiemtratendangnhap() {
+            var ten = $("#txtten").val();
+            var re = /^[A-Za-z0-9]+$/;
+            if (re.test(ten)) {
+                $("#erten").html("*");
+                return true;
+            } else {
+                $("#erten").html("Tên đăng nhập sai định dạng");
+            }
+
+        }
+
+        function kiemtramatkhau() {
+            var mk = $("#txtmk").val();
+            var re = /^(?=.*[A-Za-z])(?=.*[0-9]).{6,}$/;
+            if (re.test(mk)) {
+                $("#ermk").html("*");
+                return true;
+            } else {
+                $("#ermk").html("Mật khẩu không đúng định dạng");
+                return false;
+            }
+        }
+
+        function kiemtralaimatkhau() {
+            var mk = $("#txtmk").val();
+            var nlmk = $("#txtnlmk").val();
+            if (mk == nlmk) {
+                $("#ernlmk").html("*");
+                return true;
+            } else {
+                $("#ernlmk").html("Nhập lại mật khẩu phải trùng với mật khẩu");
+                return false;
+            }
+        }
+
+        function kiemtrahoten() {
+            var ten = $("#txtht").val();
+            var re = /^([A-Z]{1}[a-z]*\s)*([A-Z]{1}[a-z]*){1}$/;
+            if (re.test(ten)) {
+                $("#erht").html("*");
+                return true;
+            } else {
+                $("#erht").html("Họ tên chưa đúng định dạng");
+                return false;
+            }
+        }
+
+        function kiemtranamsinh() {
+            var ns = new Date($("#txtns").val());
+            var today = new Date();
+
+            if (ns.getFullYear() <= 2002) {
+                $("#erns").html("*");
+                return true;
+            } else {
+                $("#erns").html("Năm sinh phải < 2002");
+                return false;
+            }
+        }
+
+        function kiemtradiachi() {
+            var diachi = $("txtdc").val();
+
+            if (diachi != "") {
+                $("#erdc").html("(*)");
+                return true;
+            } else {
+                $("#erdc").html("Nhap dia chi !!!");
+                return false;
+            }
+        }
+
+        function kiemtrasodienthoai() {
+            var sdt = $("#txtsdt").val();
+            var re = /^[0-9]{9,10}$/;
+            if (re.test(sdt)) {
+                $("#ersdt").html("*");
+                return true;
+            } else {
+                $("#ersdt").html("Số điện thoại chưa đúng");
+                return false;
+            }
+        }
+
+        function kiemtraemail() {
+            var email = $("#txtemail").val();
+            var re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+            if (re.test(email)) {
+                $("#ermail").html("*");
+                return true;
+            } else {
+                $("#ermail").html("Email chưa đúng định dạng");
+                return false;
+            }
+        }
+
+        function kiemtra() {
+            if (kiemtratendangnhap() && kiemtramatkhau() && kiemtralaimatkhau() && kiemtrahoten() && kiemtranamsinh() && kiemtradiachi() && kiemtrasodienthoai() && kiemtraemail()) {
+                document.getElementById("Ha").click();
+                alert("Đăng kí thành công");
+            } else {
+                alert("Loi nhap thong tin");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xs-pull-1" style="height: 300px;"></div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9ol-xs-pull-10" style="height: auto;">
+                <form action="">
+                    <div class="row form-group">
+                        <div class="col-12 text-center">
+                            <h1>ĐĂNG KÍ TÀI KHOẢN</h1>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Tên đăng nhập:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtten" value="Thanh">
+                            <span class="text-danger" id="erten">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Mật khẩu:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" id="txtmk" value="12345asd">
+                            <span class="text-danger" id="ermk">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Nhập lại mật khẩu:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" id="txtnlmk" value="12345asd">
+                            <span class="text-danger" id="ernlmk">*</span>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-12 text-center">
+                            <h2>THÔNG TIN ĐĂNG NHẬP </h2>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Họ và tên:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtht" value="Ha Mai">
+                            <span class="text-danger" id="erht">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Ngày sinh:</label>
+                        <div class="col-9">
+                            <input type="date" class="form-control" id="txtns">
+                            <span class="text-danger" id="erns">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Giới tính:</label>
+                        <div class="col-9">
+                            <div class="form-check-inline">
+                                <input type="radio" name="gt" id="" class="form-check-input" value="Nam" checked="true"> Nam
+                                <input type="radio" name="gt" id="" class="form-check-input" value="Nữ">Nữ
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Địa chỉ:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtdc">
+                            <span class="text-danger" id="erdc">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Điện thoại:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtsdt">
+                            <span class="text-danger" id="ersdt">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Email:</label>
+                        <div class="col-9">
+                            <input type="email" class="form-control" id="txtemail">
+                            <span class="text-danger" id="ermail">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-9" style="text-align: center;">
+                            <a href="../index.html" id="Ha"></a><input type="button" value="Đăng kí" class="btn btn-dark" onclick="kiemtra();">
+                            <input type="reset" value="Hủy" class="btn btn-dark">
+                            <a href="../index.html"> <input type="button" value="Trở về" class="btn btn-dark"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

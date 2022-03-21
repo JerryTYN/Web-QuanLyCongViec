@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+
+    <link rel="stylesheet" href="../css/dangky.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <!-- 
+    <style>
+        [class="col-3"] {
+            text-align: right;
+        }
+    </style> -->
+    <script>
+        $(document).ready(function() {
+            $("#txtten").blur(function() {
+                kiemtrataikhoan();
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtmk").blur(function() {
+                kiemtramatkhau();
+            })
+
+        })
+
+        function kiemtrataikhoan() {
+            var ten = $("#txtten").val();
+            var re = /^[A-Za-z0-9]+$/;
+            if (re.test(ten)) {
+                $("#erten").html("*");
+                return true;
+            } else {
+                $("#erten").html("Tên đăng nhập sai định dạng");
+            }
+        }
+
+        function kiemtramatkhau() {
+            var mk = $("#txtmk").val();
+            var re = /^(?=.*[A-Za-z])(?=.*[0-9]).{6,}$/;
+            if (re.test(mk)) {
+                $("#ermk").html("*");
+                return true;
+            } else {
+                $("#ermk").html("Mật khẩu không đúng định dạng");
+                return false;
+            }
+        }
+
+        function kiemtradangnhap() {
+            if (kiemtrataikhoan() && kiemtramatkhau()) {
+                document.getElementById("tnn").click();
+            }
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xs-pull-1" style="height: 300px;"></div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9ol-xs-pull-10" style="height: auto;">
+                <form action="">
+                    <div class="row form-group">
+                        <div class="col-12 text-center">
+                            <h1>ĐĂNG NHẬP</h1>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Tên đăng nhập:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtten">
+                            <span class="text-danger" id="erten">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Mật khẩu:</label>
+                        <div class="col-9">
+                            <input type="password" class="form-control" id="txtmk">
+                            <span class="text-danger" id="ermk">*</span>
+                        </div>
+                    </div>
+                    <a href="../index.html" id="tnn"></a><input type="button" value="Đăng nhập" class="btn btn-dark" style="margin-left: 200px;" onclick="kiemtradangnhap();">
+                    <a href="../index.html"> <input type="button" value="Trở lại" style="margin-left: 100px; " class="btn btn-dark"></a>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

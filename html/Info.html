@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ldiv">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <title>Sider Menu Bar CSS</title> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="../css/stylett.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/function.js"></script>
+    <title>Tài khoản của tôi</title>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../img/LOGO3.png">
+    </div>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="../html/Quanlyduan.html"><i class="fas fa-file"></i>Quản lý dự án</a></li>
+            <li><a href="../html/Info.html"><i class="fas fa-user"></i>Tài khoản của tôi</a></li>
+            <li><a href="../html/quanlynhanvien.html"><i class="fas fa-male"></i>Quản lý nhân viên</a></li>
+            <li><a href="../html/Xemcongviec.html"><i class="fa fa-search"></i>Xem công việc</a></li>
+            <li><a href="../html/About.html"><i class="far fa-question-circle"></i>About</a></li>
+            <li><a href="../html/contact.html"><i class="far fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+    <section>
+        <p style="color: black; font-weight: bolder;font-size: 30px; text-align: center; position: relative;top:20px;">Thông tin tài khoản</p>
+        <div class="Form">
+            <table>
+                <tr>
+                    <td style="width: 22%;">
+                        <label for="anh">Ảnh đại diện</label>
+                    </td>
+                    <td id="editanh">
+                        <span id="txtanh">
+                    <img src="../img/add.PNG" >
+                  </span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-group-justified" style="width: 60px; height: 40px; background: green;" data-toggle="modal" data-targer="#myModal1" id="Open">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="name" id="name">Tên đăng nhập</label>
+                    </td>
+                    <td>
+                        <p>username123</p>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass" id="pass">Mật khẩu</label>
+                    </td>
+                    <td id="editpass">
+                        <span id="txtpass">*******</span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-group-justified" style="width: 60px; height: 40px; background: green;" data-toggle="modal" data-targer="#myModal2" id="Open1">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="fullname">Tên người dùng</label>
+                    </td>
+                    <td id="editname">
+                        <span id="txtname">Phan Hồng Thanh</span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-group-justified" style="width: 60px; height: 40px; background: green;" data-toggle="modal" data-targer="#myModal3" id="Open2">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="sdt">Điện thoại</label>
+                    </td>
+                    <td id="editnum">
+                        <span id="txtnum">0834784858</span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-group-justified" style="width: 60px; height: 40px; background: green;" data-toggle="modal" data-targer="#myModal4" id="Open3">Edit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td id="edite">
+                        <span id="txtem">abc123@email.com</span>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-group-justified" style="width: 60px; height: 40px; background: green;" data-toggle="modal" data-targer="#myModal5" id="Open4">Edit</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <!--Modal1-->
+    <div class="modal fade" id="myModal1" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-9" style="position: relative; left: 130px;">
+                        <h3>Chỉnh sửa ảnh</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <div class="col-3" style="text-align: right; top:10px;">
+                            <label class="control-label" for="">Chọn ảnh</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="file" name="name" id="txta" class="form-control" style="height: 45px;">
+                            <div id="era" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" style="left: 170px;">
+                            <button type="button" class="btn btn-success btn-group-justified" id="save">Lưu</button>
+                        </div>
+                        <div class="col-2" style="left: 160px;">
+                            <button type="button" class="btn btn-danger btn-group-justified" data-dismiss="modal">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Modal2-->
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-9" style="position: relative; left: 130px;">
+                        <h3>Chỉnh sửa mật khẩu</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <div class="col-4" style="text-align: right; top:10px;">
+                            <label class="control-label" for="">Nhập mật khẩu</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="password" name="ps" id="txtp" class="form-control" style="height: 45px;">
+                            <div id="erp" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" style="left: 170px;">
+                            <button type="button" class="btn btn-success btn-group-justified" id="save1">Lưu</button>
+                        </div>
+                        <div class="col-2" style="left: 160px;">
+                            <button type="button" class="btn btn-danger btn-group-justified" data-dismiss="modal">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Modal3-->
+    <div class="modal fade" id="myModal3" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-9" style="position: relative; left: 130px;">
+                        <h3>Chỉnh sửa tên</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <div class="col-5" style="text-align: right; top:10px;">
+                            <label class="control-label" for="">Nhập tên người dùng</label>
+                        </div>
+                        <div class="col-7">
+                            <input type="text" name="na" id="txtn" class="form-control" style="height: 45px;">
+                            <div id="ern" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" style="left: 170px;">
+                            <button type="button" class="btn btn-success btn-group-justified" id="save2">Lưu</button>
+                        </div>
+                        <div class="col-2" style="left: 160px;">
+                            <button type="button" class="btn btn-danger btn-group-justified" data-dismiss="modal">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Modal4-->
+    <div class="modal fade" id="myModal4" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-9" style="position: relative; left: 70px;">
+                        <h3>Chỉnh sửa số điện thoại</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <div class="col-4" style="text-align: right; top:10px;">
+                            <label class="control-label" for="">Nhập số điện thoại</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="text" name="sdt" id="txts" class="form-control" style="height: 45px;">
+                            <div id="ers" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" style="left: 170px;">
+                            <button type="button" class="btn btn-success btn-group-justified" id="save3">Lưu</button>
+                        </div>
+                        <div class="col-2" style="left: 160px;">
+                            <button type="button" class="btn btn-danger btn-group-justified" data-dismiss="modal">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <!--Modal5-->
+    <div class="modal fade" id="myModal5" role="dialog">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-9" style="position: relative; left: 120px;">
+                        <h3>Chỉnh sửa Email</h3>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="row form-group">
+                        <div class="col-3" style="text-align: right; top:10px;">
+                            <label class="control-label" for="">Nhập Email</label>
+                        </div>
+                        <div class="col-9">
+                            <input type="text" name="email" id="txte" class="form-control" style="height: 45px;">
+                            <div id="ere" style="color: red;"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2" style="left: 170px;">
+                            <button type="button" class="btn btn-success btn-group-justified" id="save4">Lưu</button>
+                        </div>
+                        <div class="col-2" style="left: 160px;">
+                            <button type="button" class="btn btn-danger btn-group-justified" data-dismiss="modal">Hủy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

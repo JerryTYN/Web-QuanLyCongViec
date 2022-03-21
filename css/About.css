@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');  
+            .begin{
+                
+                font-weight: bold;
+                padding: 100px;
+            }
+            
+            header{
+                color: skyblue;
+                text-align: center;
+                font-weight: bold;
+                font-size: 45px;
+                padding: 50px;
+            }
+            
+            footer{
+                text-align: center;
+                font-size: 20px;
+                color: red;
+                padding: 30px;
+            }
+           
+            .centerTable{ 
+                margin: 0px auto;
+                font-size: 40px;
+            }
+
+        

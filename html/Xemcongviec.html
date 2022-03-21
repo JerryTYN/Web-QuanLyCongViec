@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <!-- <title>Sider Menu Bar CSS</title> -->
+    <link rel="stylesheet" href="../css/Xemcongviec.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Công việc của tôi</title>
+</head>
+
+<body>
+
+
+
+    <div class="header">
+        <a href="../index.html"><img src="../img/LOGO3.png"></a>
+    </div>
+    <hr>
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Menu</header>
+        <ul>
+            <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
+            <li><a href="../html/Quanlyduan.html"><i class="fas fa-file"></i>Quản lý dự án</a></li>
+            <li><a href="../html/Info.html"><i class="fas fa-user"></i>Tài khoản của tôi</a></li>
+            <li><a href="../html/quanlynhanvien.html"><i class="fas fa-male"></i>Quản lý nhân viên</a></li>
+            <li><a href="../html/Xemcongviec.html"><i class="fa fa-search"></i>Xem công việc</a></li>
+            <li><a href="../html/About.html"><i class="far fa-question-circle"></i>About</a></li>
+            <li><a href="../html/contact.html"><i class="far fa-envelope"></i>Contact</a></li>
+        </ul>
+    </div>
+    <section>
+        <div id="nv">Nhân viên:</div>
+        <a href="../index.html"> <button style="font-weight: bold; background-color: greenyellow; height: 40px;">Đăng xuất<i class="fa fa-sign-out"></i></button></a>
+        <br>
+
+        <div id="ttnv">
+            <b>Tên: Phan Hồng Thanh</b>
+            <i>Mã: 19431971</i>
+            <p>Phòng ban: Ý tưởng - Thiết kế</p>
+            <p>Chức vụ: Trưởng phòng</p>
+        </div>
+        <div id="noidung">
+            <form>
+
+                <table id="mytable" onblur="return tiendo();">
+                    <tr id="tencot">
+                        <td id="ten_cv">Công việc</td>
+                        <td id="mo_ta">Mô tả</td>
+                        <td id="trang_thai">Tiến độ</td>
+                        <td id="thoi_hanCv">Thời hạn</td>
+                        <td id="ghi_chu">Ghi chú</td>
+                    </tr>
+                    <tr id="1">
+                        <td><a href="#">Tạo logo cho công ty xây dựng Hưng Phát</a></td>
+                        <td id="chinh">
+                            <label>Gặp khách hàng lấy yêu cầu:</label>
+                            <input onclick="tinh(0);" type="checkbox" name="v" id="">
+
+                            <label>Vẽ logo demo:</label>
+                            <input onclick="tinh(1);" type="checkbox" name="v" id="">
+
+                            <!-- <label>Giao demo:</label>
+                            <input onclick="tinh(2);" type="checkbox" name="v" id="">
+
+                            <label>Giao bản hoàn chỉnh:</label>
+                            <input onclick="tinh(3);" type="checkbox" name="v" id=""> -->
+                        </td>
+                        <td id="tpt1">Đã làm 0%</td>
+                        <td>10/3/2020 - 10/4/2020</td>
+                        <td><textarea style="height: 90px;width: 96%;"></textarea></td>
+                    </tr>
+
+                    <tr id="2">
+                        <td><a href="#">Thiết kế layout cho trang web Hưng Phát</a></td>
+                        <td id="chinh">
+                            <label>Gặp khách hàng lấy yêu cầu:</label>
+                            <input onclick="tinh1(0);" type="checkbox" name="v" id="">
+
+                            <label>Vẽ demo:</label>
+                            <input onclick="tinh1(1);" type="checkbox" name="v" id="">
+
+                            <label>Giao demo:</label>
+                            <input onclick="tinh1(2);" type="checkbox" name="v" id="">
+
+                            <label>Giao bản hoàn chỉnh:</label>
+                            <input onclick="tinh1(3);" type="checkbox" name="v" id="">
+                        </td>
+                        <td id="tpt2">Đã làm 0%</td>
+                        <td>10/4/2020 - 17/4/2020</td>
+                        <td><textarea style="height: 90px;width: 96%;"></textarea></td>
+                    </tr>
+                    <tr id="3">
+                        <td><a href="#">Làm giao diện đăng kí tài khoản</a></td>
+                        <td id="chinh">
+                            <label>Gặp khách hàng lấy yêu cầu:</label>
+                            <input onclick="tinh2(0);" type="checkbox" name="v" id="">
+
+                            <label>Vẽ demo:</label>
+                            <input onclick="tinh2(1);" type="checkbox" name="v" id="">
+
+                            <label>Giao demo:</label>
+                            <input onclick="tinh2(2);" type="checkbox" name="v" id="">
+
+                            <label>Giao bản hoàn chỉnh:</label>
+                            <input onclick="tinh2(3);" type="checkbox" name="v" id="">
+                        </td>
+                        <td id="tpt3">Đã làm 0%</td>
+                        <td>17/4/2020 - 20/4/2020</td>
+                        <td><textarea style="height: 90px;width: 96%;"></textarea></td>
+                    </tr>
+                    <tr id="4">
+                        <td><a href="#">Tạo giao diện trang đăng nhập</a></td>
+                        <td id="chinh">
+                            <label>Gặp khách hàng lấy yêu cầu:</label>
+                            <input onclick="tinh3(0);" type="checkbox" name="v" id="">
+
+                            <label>Vẽ demo:</label>
+                            <input onclick="tinh3(1);" type="checkbox" name="v" id="">
+
+                            <label>Giao demo:</label>
+                            <input onclick="tinh3(2);" type="checkbox" name="v" id="">
+
+                            <label>Giao bản hoàn chỉnh:</label>
+                            <input onclick="tinh3(3);" type="checkbox" name="v" id="">
+
+                            <label>Ghi nhận góp ý:</label>
+                            <input onclick="tinh3(4);" type="checkbox" name="v" id="">
+                        </td>
+                        <td id="tpt4">Đã làm 0%</td>
+                        <td>20/4/2020 - 21/4/2020</td>
+                        <td><textarea style="height: 90px;width: 96%;"></textarea></td>
+                    </tr>
+
+                    <tr id="5">
+                        <td><a href="#">Tạo trang chủ cho công ty xây dựng Hưng Phát</a></td>
+                        <td id="chinh">
+                            <label>Gặp khách hàng lấy yêu cầu:</label>
+                            <input onclick="tinh4(0);" type="checkbox" name="v" id="">
+
+                            <label>Thiết kế</label>
+                            <input onclick="tinh4(1);" type="checkbox" name="v" id="">
+
+                            <label>Giao demo</label>
+                            <input onclick="tinh4(2);" type="checkbox" name="v" id="">
+
+                            <label>Giao bản hoàn chỉnh:</label>
+                            <input onclick="tinh4(3);" type="checkbox" name="v" id="">
+                        </td>
+                        <td id="tpt5">Đã làm 0%</td>
+                        <td>21/4/2020 - 23/4/2020</td>
+                        <td><textarea style="height: 90px;width: 96%;"></textarea></td>
+                    </tr>
+
+
+
+                </table>
+
+            </form>
+        </div>
+
+        </div>
+    </section>
+</body>
+<script language="javascript">
+    // 0
+    var t = [0, 0];
+
+    function tinh(index) {
+        if (t[index] == 0)
+            t[index] = 50;
+        else t[index] = 0;
+        KTLai();
+    }
+
+    function KTLai() {
+        var pt = t[0] + t[1]
+        document.getElementById("tpt1").innerHTML = "Đã làm " + pt + "%";
+    }
+    // 1
+    var t1 = [0, 0, 0, 0];
+
+    function tinh1(index) {
+        if (t1[index] == 0)
+            t1[index] = 25;
+        else t1[index] = 0;
+        KTLai1();
+    }
+
+    function KTLai1() {
+        var pt1 = t1[0] + t1[1] + t1[2] + t1[3];
+        document.getElementById("tpt2").innerHTML = "Đã làm " + pt1 + "%";
+    }
+    // 2
+    var t2 = [0, 0, 0, 0];
+
+    function tinh2(index) {
+        if (t2[index] == 0)
+            t2[index] = 25;
+        else t2[index] = 0;
+        KTLai2();
+    }
+
+    function KTLai2() {
+        var pt2 = t2[0] + t2[1] + t2[2] + t2[3];
+        document.getElementById("tpt3").innerHTML = "Đã làm " + pt2 + "%";
+    }
+    // 3
+    var t3 = [0, 0, 0, 0, 0];
+
+    function tinh3(index) {
+        if (t3[index] == 0)
+            t3[index] = 20;
+        else t3[index] = 0;
+        KTLai3();
+    }
+
+    function KTLai3() {
+        var pt3 = t3[0] + t3[1] + t3[2] + t3[3] + t3[4];
+        document.getElementById("tpt4").innerHTML = "Đã làm " + pt3 + "%";
+    }
+    // 4
+    var t4 = [0, 0, 0, 0];
+
+    function tinh4(index) {
+        if (t4[index] == 0)
+            t4[index] = 25;
+        else t4[index] = 0;
+        KTLai4();
+    }
+
+    function KTLai4() {
+        var pt4 = t4[0] + t4[1] + t4[2] + t4[3];
+        document.getElementById("tpt5").innerHTML = "Đã làm " + pt4 + "%";
+    }
+    // 5
+    var t5 = [0, 0, 0];
+
+    function tinh5(index) {
+        if (t5[index] == 0)
+            t5[index] = 33.33;
+        else t5[index] = 0;
+        KTLai5();
+    }
+
+    function KTLai5() {
+        var pt5 = t5[0] + t5[1] + t5[2];
+        document.getElementById("tpt6").innerHTML = "Đã làm " + pt5 + "%";
+    }
+    // 6
+    // var t6 = [0, 0, 0];
+
+    // function tinh6(index) {
+    //     if (t6[index] == 0)
+    //         t6[index] = 33.33333333;
+    //     else t6[index] = 0;
+    //     KTLai6();
+    // }
+
+    // function KTLai6() {
+    //     var pt6 = t6[0] + t6[1] + t6[2];
+    //     document.getElementById("tpt7").innerHTML = "Đã làm " + pt6 + "%";
+    // }
+</script>
+
+</html>

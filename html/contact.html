@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+    <link rel="stylesheet" href="../css/dangky.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        $(document).ready(function() {
+            $("#txtht").blur(function() {
+                var ten = $("#txtht").val();
+                var re = /^([A-Z]{1}[a-z]*\s)*([A-Z]{1}[a-z]*){1}$/;
+                if (re.test(ten)) {
+                    $("#erht").html("*");
+                    return true;
+                } else {
+                    $("#erht").html("Họ tên chưa đúng định dạng");
+                    return false;
+                }
+            })
+
+        })
+
+
+        $(document).ready(function() {
+            $("#txtdc").blur(function() {
+                var diachi = $(this).val();
+                var re = /^$/;
+                if (diachi != "") {
+                    $("#erdc").html("(*)");
+                    return true;
+                } else {
+                    $("#erdc").html("Nhap dia chi !!!");
+                    return false;
+                }
+            })
+        })
+        $(document).ready(function() {
+            $("#txtsdt").blur(function() {
+                var sdt = $("#txtsdt").val();
+                var re = /^[0-9]{9,10}$/;
+                if (re.test(sdt)) {
+                    $("#ersdt").html("*");
+                    return true;
+                } else {
+                    $("#ersdt").html("Số điện thoại chưa đúng");
+                    return false;
+                }
+            })
+
+        })
+        $(document).ready(function() {
+            $("#txtemail").blur(function() {
+                var email = $("#txtemail").val();
+                var re = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+                if (re.test(email)) {
+                    $("#ermail").html("*");
+                    return true;
+                } else {
+                    $("#ermail").html("Email chưa đúng định dạng");
+                    return false;
+                }
+            })
+
+        });
+    </script>
+    <style>
+        h2 {
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="../index.html"> <button style="font-weight: bold; background-color: darkgrey; border-radius: 8px; box-shadow: 5px 5px 10px; width: 140px; height: 50px; font-size: 17px;">Trang chủ<i class="fa fa-home"></i></button></a>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xs-pull-1" style="height: 300px;">
+
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-9ol-xs-pull-10" style="height: auto;">
+                <form action="">
+                    <p>
+                        <h1>Hotline: 0962 213 247</h1>
+                        <b>Để tìm hiểu về TKE hay hỗ trợ kỹ thuật hãy gọi cho chúng tôi. Chúng tôi sẽ hỗ trợ quý khách tốt nhất.</b>
+                    </p>
+                    <div class="row form-group">
+                        <div class="col-12 text-center">
+                            <h2> <b>GỬI EMAIL</b></h2>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label class="col-3">Họ và tên:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtht">
+                            <span class="text-danger" id="erht">*</span>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <label class="col-3">Địa chỉ:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtdc">
+                            <span class="text-danger" id="erdc">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Điện thoại:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control" id="txtsdt">
+                            <span class="text-danger" id="ersdt">*</span>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <label class="col-3">Email:</label>
+                        <div class="col-9">
+                            <input type="email" class="form-control" id="txtemail">
+                            <span class="text-danger" id="ermail">*</span>
+                        </div>
+                        <div class="row form-group">
+                            <label class="col-3"> Nội dung Email:</label>
+                            <div class="col-9">
+                                <textarea name="" id="txtemail" cols="110" rows="10"></textarea>
+                                <span class="text-danger" id="ermail">*</span>
+
+                            </div>
+
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-9" style="text-align: center;">
+
+                                <a href="#"><input type="button" style="background-color: blue" value=" Gửi email" class="btn btn-dark"></a>
+
+                            </div>
+                </form>
+                </div>
+                </div>
+            </div>
+</body>
+
+</html>

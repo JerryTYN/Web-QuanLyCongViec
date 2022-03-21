@@ -1,0 +1,14 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(../img/NEN.jpg);
+}
+
+[class="col-3"] {
+    text-align: right;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+span {
+    text-shadow: 5px 5px 10px gray;
+}
